@@ -1,0 +1,55 @@
+
+@(equationform: Form[Application.Equation] , message : String)
+
+@import helper._
+
+
+
+@main("Equation Application") {
+    
+    <html>
+    
+    <body>
+    <b>
+    
+   <h1><b><center>Welcome To Our Site</center></b></h1> 
+   <font color="red" id="hid">@message</font>
+   
+
+   
+   
+   @form(action = routes.Application.calculate(), args = 'id -> "equationform")  {
+      
+        @inputText(
+            field = equationform("a"),
+            args = '_label -> "Enter ( a ) Parameter : ", 'placeholder -> 0.0 , 'size ->2
+        )
+   
+   
+        
+        @inputText(
+            field = equationform("b"),
+            args = '_label -> "Enter ( b ) Parameter : ", 'placeholder -> 0.0 , 'size ->2
+        )
+        
+        
+        
+   @inputText(
+            field = equationform("c"),
+            args = '_label -> "Enter ( c ) Parameter : ", 'placeholder -> 0.0, 'size ->2
+        )
+        
+        
+     <p class="buttons">
+       <input type="submit" value="Solve Equation!!!" >
+        <p>
+  
+    </b>
+    </body>
+    
+    
+    </html>
+    
+}
+
+}

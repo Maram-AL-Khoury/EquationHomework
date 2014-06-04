@@ -1,0 +1,45 @@
+@(answer1 : Double , answer2 : Double )
+
+@import helper._
+
+
+
+@main("Equation Solving Result") {
+
+<html>
+    
+    <body>
+    
+   
+    
+    @if(answer1 == Double.MIN_VALUE){
+    
+    <h1>Your Equation is impossible to Solve!!!!</h1>
+    
+   <br>
+   <p>
+        To enter another equation Parameters <a href="@routes.Application.index" >click here</a>
+    </p>
+    }
+    
+    @if(answer1 != Double.MIN_VALUE){
+    
+   <h1>Here is Your Equation Results :</h1>
+   
+   <table border=1 borderColor="#FFCC99">
+      <tr>
+      <td align="center" width="70" height="30">Ansewer1 </td>
+      <td align="center" width="50" height="30">@answer1</td>
+      </tr>
+      <tr>
+      <td align="center" width="70" height="30">Ansewer2 </td>
+      <td align="center" width="50" height="30">@answer2</td>
+      </tr>
+   
+   
+   </table>
+    }
+    </body>
+    </html>
+    
+    }
